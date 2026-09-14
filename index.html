@@ -16,17 +16,17 @@
       <div class="kinetic-ticker__item">
         <span>SCAVX MOD TWEAKS</span>
         <span class="highlight">AUTHOR: [GRUMP]SUNLESSK</span>
-        <span class="orange">7 !BSET COMMANDS</span>
-        <span>27 CLONED UNITS</span>
-        <span class="highlight">18 SCAVENGER SQUADS</span>
+        <span class="orange">8 !BSET COMMANDS</span>
+        <span>28 CLONED UNITS</span>
+        <span class="highlight">24 SCAVENGER SQUADS</span>
         <span class="orange">EDITP SYNC COMPLIANT</span>
       </div>
       <div class="kinetic-ticker__item">
         <span>SCAVX MOD TWEAKS</span>
         <span class="highlight">AUTHOR: [GRUMP]SUNLESSK</span>
-        <span class="orange">7 !BSET COMMANDS</span>
-        <span>27 CLONED UNITS</span>
-        <span class="highlight">18 SCAVENGER SQUADS</span>
+        <span class="orange">8 !BSET COMMANDS</span>
+        <span>28 CLONED UNITS</span>
+        <span class="highlight">24 SCAVENGER SQUADS</span>
         <span class="orange">EDITP SYNC COMPLIANT</span>
       </div>
     </div>
@@ -43,6 +43,7 @@
       <nav>
         <ul class="nav-links">
           <li><a href="#commands" class="active">Tweak Commands</a></li>
+          <li><a href="#changelog" style="color: var(--brand-orange); font-weight: 700;">Changelog</a></li>
           <li><a href="#editp-sync" style="color: var(--brand-blue); font-weight: 700;">EditP Studio ↗</a></li>
           <li><a href="#arsenal">Cloned Units</a></li>
           <li><a href="#threat-matrix">Scavenger Squads</a></li>
@@ -54,7 +55,7 @@
       <div class="nav-action">
         <button id="btnCopyAllNav" class="btn btn-primary btn-sm">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-          Copy Tweak Batch (All 7)
+          Copy Tweak Batch (All 8)
         </button>
       </div>
     </div>
@@ -76,13 +77,17 @@
         </h2>
 
         <p class="hero-subtitle">
-          Tweak compilation for Beyond All Reason containing Scavenger squad AI behaviors, 27 cloned units, weapon definitions, and constructor buildmenus.
+          Tweak compilation for Beyond All Reason containing Scavenger squad AI behaviors, 28 cloned units (featuring the new Titaniator), weapon definitions, and constructor buildmenus.
         </p>
 
         <div style="display: flex; gap: 14px; flex-wrap: wrap;">
           <a href="#commands" class="btn btn-primary">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
-            Tweak Commands
+            Tweak Commands (8)
+          </a>
+          <a href="#changelog" class="btn btn-outline" style="border-color: var(--brand-orange); color: var(--brand-orange); background: #ffffff;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+            Changelog v2.5
           </a>
           <a href="#editp-sync" class="btn btn-outline" style="border-color: var(--brand-blue); color: var(--brand-blue); background: #ffffff;">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
@@ -90,11 +95,11 @@
           </a>
           <a href="#arsenal" class="btn btn-outline">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polygon points="12 8 8 12 12 16 12 8"></polygon></svg>
-            Cloned Units (27)
+            Cloned Units (28)
           </a>
           <a href="#threat-matrix" class="btn btn-dark">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-            Scavenger Squads (18)
+            Scavenger Squads (24)
           </a>
         </div>
 
@@ -102,18 +107,18 @@
         <div class="hero-stats-row">
           <div class="hero-stat-card">
             <div class="stat-label">Cloned Units</div>
-            <div class="stat-val" id="heroUnitsCount">27</div>
-            <div class="stat-sub">Defined in tweakdefs 0-2</div>
+            <div class="stat-val" id="heroUnitsCount">28</div>
+            <div class="stat-sub">Defined in tweakdefs 0-3</div>
           </div>
           <div class="hero-stat-card">
             <div class="stat-label">Scavenger Squads</div>
-            <div class="stat-val" id="heroSquadsCount">18</div>
-            <div class="stat-sub">Configured in tweakunits</div>
+            <div class="stat-val" id="heroSquadsCount">24</div>
+            <div class="stat-sub">Configured in tweakunits & defs</div>
           </div>
           <div class="hero-stat-card">
             <div class="stat-label">!bset Commands</div>
-            <div class="stat-val">7</div>
-            <div class="stat-sub">tweakunits & tweakdefs 0-5</div>
+            <div class="stat-val">8</div>
+            <div class="stat-sub">tweakunits & tweakdefs 0-6</div>
           </div>
           <div class="hero-stat-card">
             <div class="stat-label">Unit Tiers</div>
@@ -139,12 +144,12 @@
           <div class="command-hub-toolbar">
             <div class="toolbar-instructions">
               <div class="step-num">!</div>
-              <span>All 7 commands are interdependent and required together. Copy the entire batch at once.</span>
+              <span>All 8 commands are interdependent and required together. Copy the entire batch at once.</span>
             </div>
             <div style="display: flex; gap: 10px;">
               <button id="btnCopyAllCommands" class="btn btn-primary btn-sm">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-                Copy Tweak Batch (All 7)
+                Copy Tweak Batch (All 8)
               </button>
               <button id="btnExportTxt" class="btn btn-outline btn-sm">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
@@ -161,9 +166,112 @@
           <div class="command-hub-footer">
             <button id="btnCopyAllBottom" class="btn btn-primary">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-              Copy Full Tweak Batch (All 7 Commands)
+              Copy Full Tweak Batch (All 8 Commands)
             </button>
-            <span class="hub-footer-hint">Copies all 7 steps to clipboard — paste directly into Beyond All Reason lobby chat.</span>
+            <span class="hub-footer-hint">Copies all 8 steps to clipboard — paste directly into Beyond All Reason lobby chat.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Changelog -->
+    <section id="changelog" class="section" style="background: #ffffff; border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag" style="color: var(--brand-orange);">Update Log</span>
+          <h3 class="section-title">Mod Changelog</h3>
+          <p class="section-desc">
+            Complete revision history of ScavX balance adjustments, new super-units, weapon mechanics, and lobby command restructuring.
+          </p>
+        </div>
+
+        <div class="changelog-feed">
+          <!-- Current Version Card: v2.5 -->
+          <div class="changelog-card current">
+            <div class="changelog-meta">
+              <span class="changelog-ver">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand-orange)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                ScavX v2.5
+              </span>
+              <span class="changelog-badge-current">LATEST RELEASE</span>
+              <span class="changelog-date">Current Revision</span>
+              <span class="badge-tag">8-PART BATCH</span>
+            </div>
+
+            <p style="font-size: 0.95rem; color: var(--text-main); margin-bottom: 16px; line-height: 1.5;">
+              Major balance & titan expansion introducing the <strong>Titaniator</strong> super-heavy walker, doubling health pools for key boss units, tuning super-turrets, and expanding the lobby command chain to 8 modular parts.
+            </p>
+
+            <div class="changelog-grid">
+              <!-- New Unit Card -->
+              <div class="changelog-item">
+                <div class="changelog-item-title">
+                  <span style="color: var(--brand-orange);">⚡</span> New Unit: Titaniator
+                </div>
+                <ul class="changelog-item-list">
+                  <li><strong>Heavy Titan v2:</strong> Arm Bantha variant boasting <strong>1,000,000 HP</strong> with high mobility (51.6 speed).</li>
+                  <li><strong>Teh Lazer of Dewm:</strong> Piercing high-intensity laser dealing <strong>15,000 damage/shot</strong> (5.5s reload).</li>
+                  <li><strong>Rapid Fire & Rockets:</strong> Equipped with 3,000 dmg bantha plasma fire + 1,500 dmg rocket salvos.</li>
+                  <li><strong>Scav Wave Integration:</strong> 20-unit Raider squad AI wave (anger 90–100).</li>
+                </ul>
+              </div>
+
+              <!-- Titan Buffs Card -->
+              <div class="changelog-item">
+                <div class="changelog-item-title">
+                  <span style="color: var(--brand-crimson);">👑</span> Boss & Titan Buffs
+                </div>
+                <ul class="changelog-item-list">
+                  <li><strong>Queen Tyrannus:</strong> HP raised from 1.507M to <strong>1,907,000 HP</strong> (+400k HP). Dual leveller cannons buffed to <strong>25,000 dmg</strong>, dual heatrays to <strong>3,000 dmg</strong>, AA missiles to <strong>2,000 dmg</strong>.</li>
+                  <li><strong>Multiplicable:</strong> Base HP doubled from 1.003M to <strong>2,003,000 HP</strong>. Anger threshold min increased to 80.</li>
+                  <li><strong>Walking Fortress:</strong> Base HP doubled from 1.0M to <strong>2,000,000 HP</strong> for long-range 550 AoE siege survival.</li>
+                  <li><strong>King Chimera:</strong> Boss cannon damage increased from 5,200 to <strong>10,200 per shell</strong> (10-shot burst = <strong>102,000 dmg</strong>).</li>
+                  <li><strong>Nukinator:</strong> Tactical ICBM missile damage buffed from 21,500 to <strong>24,500 dmg</strong> (320 AoE).</li>
+                </ul>
+              </div>
+
+              <!-- Defenses & Rebalance Card -->
+              <div class="changelog-item">
+                <div class="changelog-item-title">
+                  <span style="color: var(--brand-blue);">🛡️</span> Defense & Turret Limits
+                </div>
+                <ul class="changelog-item-list">
+                  <li><strong>Ground Decimator:</strong> Damage normalized to <strong>60,000 default / 40,000 shields</strong>. Hard-capped to <strong>16 units max</strong> per player to prevent engine lag.</li>
+                  <li><strong>Epic Xyston:</strong> Adv SAM damage rebalanced to 40,000 ground / 80,000 vs VTOL air.</li>
+                  <li><strong>Epic Mini Ragnarok:</strong> Damage adjusted to 7,000 (0.5s reload). Metal cost set to 25k, energy to 450k.</li>
+                  <li><strong>Sanctuary of All Sanctuary:</strong> Boosted metal production to <strong>+1,000 metal/sec</strong>. Capped at <strong>6 units max</strong>.</li>
+                  <li><strong>Fountain Cannon:</strong> Hard-capped to <strong>4 units max</strong> per player.</li>
+                  <li><strong>Epic Wall:</strong> Hard-capped to <strong>500 units max</strong> per player.</li>
+                </ul>
+              </div>
+
+              <!-- System & Commands Card -->
+              <div class="changelog-item">
+                <div class="changelog-item-title">
+                  <span style="color: var(--brand-emerald);">⚙️</span> 8-Part Modular Injections
+                </div>
+                <ul class="changelog-item-list">
+                  <li><strong>Expanded to 8 Commands:</strong> Added <code style="font-family: var(--font-mono); font-size: 0.8em; background: #e2e8f0; padding: 1px 4px; border-radius: 3px;">!bset tweakdefs6</code> to accommodate expanded titan and defense definitions.</li>
+                  <li><strong>Chat Buffer Safety:</strong> Prevents lobby payload truncation and syntax drops in Beyond All Reason battle rooms.</li>
+                  <li><strong>Squad AI Adjustments:</strong> Legion Fig Def squad count updated to 25. Custom anger windows tuned for mid/late game balance.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Previous Version Card: v2.4 -->
+          <div class="changelog-card" style="opacity: 0.85;">
+            <div class="changelog-meta">
+              <span class="changelog-ver" style="font-size: 1.15rem;">
+                ScavX v2.4
+              </span>
+              <span class="changelog-date">Legacy Release</span>
+              <span class="badge-tag">7-PART BATCH</span>
+            </div>
+
+            <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 8px; line-height: 1.5;">
+              Initial release of the modular 7-step tweak system with 27 cloned units, basic/special Scavenger squad overrides, constructor buildmenu injections, and full EditP studio compatibility.
+            </p>
           </div>
         </div>
       </div>
@@ -378,7 +486,7 @@
             <div style="width: 32px; height: 32px; background: var(--brand-blue-light); color: var(--brand-blue); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-weight: 700; margin-bottom: 14px;">02</div>
             <h4 style="font-family: var(--font-heading); font-size: 1.1rem; margin-bottom: 8px;">Paste !bset Strings</h4>
             <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.5;">
-              Copy each of the 7 commands from the <strong>Tweak Commands</strong> section above into the battle room chat window.
+              Copy each of the 8 commands from the <strong>Tweak Commands</strong> section above into the battle room chat window.
             </p>
           </div>
 

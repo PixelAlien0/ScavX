@@ -91,11 +91,12 @@ function initCommandCenter() {
   if (!container || !window.RAW_COMMANDS) return;
 
   container.innerHTML = '';
+  const totalCmds = window.RAW_COMMANDS.length;
 
   window.RAW_COMMANDS.forEach((cmd, idx) => {
     const itemEl = document.createElement('div');
     itemEl.className = 'command-item';
-    itemEl.title = 'Click to copy all 7 commands in batch (all required)';
+    itemEl.title = `Click to copy all ${totalCmds} commands in batch (all required)`;
 
     const cmdName = cmd.id || cmd.name;
     const cmdLabel = cmd.label || cmd.title || cmdName;
@@ -105,7 +106,7 @@ function initCommandCenter() {
     itemEl.innerHTML = `
       <div class="command-info-col">
         <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 4px;">
-          <span class="badge-tag">STEP ${idx + 1} / 7</span>
+          <span class="badge-tag">STEP ${idx + 1} / ${totalCmds}</span>
           <span style="font-family: var(--font-mono); font-size: 0.68rem; color: var(--text-light); text-transform: uppercase; font-weight: 700;">${cmd.badge || 'TWEAK'}</span>
         </div>
         <h4 style="font-family: var(--font-mono); font-size: 0.88rem; font-weight: 700; color: var(--brand-dark); margin: 0 0 6px 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="${cmdLabel}">
@@ -125,7 +126,7 @@ function initCommandCenter() {
       </div>
 
       <div style="display: flex; align-items: center; justify-content: flex-end;">
-        <span class="badge-required" title="All 7 steps are required together in batch">
+        <span class="badge-required" title="All ${totalCmds} steps are required together in batch">
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
           REQUIRED BATCH
         </span>
@@ -144,10 +145,10 @@ function initCommandCenter() {
     container.appendChild(itemEl);
   });
 
-  // Batch copy handler (Copies all 7 commands at once)
+  // Batch copy handler (Copies all commands at once)
   const copyAllAction = () => {
     const allLines = window.RAW_COMMANDS.map(c => `!bset ${c.id || c.name} ${c.code || c.b64}`).join('\n');
-    copyToClipboard(allLines, 'Copied all 7 commands in batch! Paste directly into BAR lobby chat.');
+    copyToClipboard(allLines, `Copied all ${totalCmds} commands in batch! Paste directly into BAR lobby chat.`);
   };
 
   if (btnCopyAll) btnCopyAll.addEventListener('click', copyAllAction);
@@ -158,7 +159,7 @@ function initCommandCenter() {
   // Export .txt file handler
   if (btnExportTxt) {
     btnExportTxt.addEventListener('click', () => {
-      const header = `# =========================================================\n# ScavX Mod for Beyond All Reason (BAR)\n# Mod Author: [Grump]SunlessK\n# Total Injection Commands: 7 (All Required Together)\n# =========================================================\n\n`;
+      const header = `# =========================================================\n# ScavX Mod for Beyond All Reason (BAR)\n# Mod Author: [Grump]SunlessK\n# Total Injection Commands: ${totalCmds} (All Required Together)\n# =========================================================\n\n`;
       const content = header + window.RAW_COMMANDS.map(c => `# [${c.label || c.title || c.id}]\n# ${c.desc}\n!bset ${c.id || c.name} ${c.code || c.b64}\n`).join('\n');
       
       const blob = new Blob([content], { type: 'text/plain;charset=utf-8' });
@@ -589,13 +590,14 @@ function initInspector() {
     }
 
     // Strip !bset tweakXYZ prefix if present
-    const match = raw.match(/!bset\s+\w+\s+([A-Za-z0-9+/=]+)/);
+    const match = raw.match(/!bset\s+\w+\s+([A-Za-z0-9+/=_-]+)/);
     if (match && match[1]) {
       raw = match[1];
     }
 
     try {
-      const decoded = atob(raw);
+      const cleanB64 = raw.replace(/-/g, '+').replace(/_/g, '/');
+      const decoded = atob(cleanB64);
       luaOutput.value = decoded;
       showToast('Decoded Base64 to Lua successfully');
     } catch (e) {
